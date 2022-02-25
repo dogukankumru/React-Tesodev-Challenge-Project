@@ -1,13 +1,589 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background: #e5e5e5;
+}
+
+
+/* ErrorWindows Component Css Bölümü */
+
+.display-none {
+    display: none;
+}
+
+.error-window {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    bottom: 0;
+    margin: 5rem;
+    background: #C4C4C4;
+    border-radius: 8px;
+    width: 33rem;
+    min-height: 12rem;
+}
+
+.error-close {
+    margin-left: auto;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.error-window h3 {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+}
+
+.error-alert {
+    margin-left: auto;
+    margin-right: 3rem;
+    background: #FF4E78;
+    border-radius: 48px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 7rem;
+    height: 3rem;
+    color: #ffffff;
+}
+
+.error-alert span {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-window p {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* RecordForm Css Bölümü */
+
+.record-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 5rem 30rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+}
+
+.record-form input {
+    border: 1.5px solid #484848;
+    border-radius: 1.2rem;
+    height: 4.5rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+}
+
+.record-form input:hover {
+    background: rgba(100, 100, 100, 0.08);
+    border: 0.2rem solid rgba(72, 72, 72, 0.6);
+    border-radius: 0.8rem;
+}
+
+.record-form input:focus {
+    outline: none;
+}
+
+.error-borderr {
+    border: 1.5px solid #FF0000;
+}
+
+.error-borderr::placeholder {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.error-label {
+    color: rgba(255, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+.error {
+    margin-bottom: 4rem;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    color: rgba(255, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.hidden {
+    visibility: hidden;
+    margin-bottom: 3rem;
+}
+
+
+
+/* AddRecordHeader Componenti Css Bölümü */
+
+.adHeader {
+    margin-top: 2.7rem;
+    margin-left: 15rem;
+}
+
+.ad-link {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-decoration: none;
+    margin-left: 5rem;
+}
+
+.ad-link:visited {
+    color: #484848;
+}
+
+
+.ad-link span {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+}
+
+.ad-link span:hover {
+    text-decoration: underline;
+}
+
+/* SearchResultHeader Componenti Css Bölümü */
+
+.srheader {
+    margin: 2rem 2rem;
+}
+
+
+/* Pagination Componenti Css Bölümü */
+
+.pagination {
+    display: flex;
+    list-style: none;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.pagination>* {
+    margin-right: 0.5rem;
+}
+
+.page-link {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid #484848;
+    border-radius: 0.4rem;
+    background: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+
+.active {
+    background: #204080;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.page-next-prev {
+    width: 8.5rem;
+    height: 2.5rem;
+    border: 1px solid #484848;
+    border-radius: 0.4rem;
+    background: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+
+/* UserList Compenenti Css Bölümü */
+
+.result-ul {
+    list-style: none;
+    width: 40%;
+    margin: 0 38rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.8rem;
+}
+
+.result-ul li:not(.page-item) {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 0.1rem solid #7e7e7e;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.result-ul li:hover:not(.page-item) {
+    background-color: rgba(79, 117, 194, 0.21);
+    cursor: pointer;
+}
+
+
+.result-icon-userlist {
+    font-size: 3rem;
+}
+
+.result-paragraph-userlist {
+    margin-left: 1rem;
+    width: 50%;
+}
+
+.result-paragraph-userlist p:first-child {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    color: #090A0A;
+}
+
+.result-paragraph-userlist p:last-child {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #72777A;
+}
+
+.result-right-side {
+    text-align: right;
+    width: 100%;
+}
+
+.result-right-side p:first-child {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-right-side p:last-child {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+}
+
+
+
+
+/*SearchElement Compenenti Css Bölümü */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    margin: 6rem auto;
+}
+
+.search-form input {
+    width: 60%;
+    margin-right: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #484848;
+    padding: 0 2rem;
+    height: 4.6rem;
+}
+
+select {
+    margin-top: 10rem;
+    margin-left: 5rem;
+    font-size: 1.6rem;
+    width: 15.6rem;
+    height: 3rem;
+}
+
+
+
+
+
+/*Header Componentinin Css Bölümü */
+
+
+header {
+    margin-top: 10rem;
+}
+
+.header-resim {
+    width: 30%;
+    margin: 0 auto;
+    padding: 6rem;
+}
+
+.header-resim p {
+    text-align: right;
+    margin-top: 1rem;
+    margin-right: 14rem;
+    color: #484848;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+}
+
+.header-link {
+    text-decoration: none;
+    float: right;
+    margin-right: 20rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+}
+
+.header-link:visited {
+    color: white;
+}
+
+/* Butonla alakalı Css Bölümü */
+
+.btn {
+    background: #204080;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover:not(button:disabled) {
+    background: #4F75C2;
+}
+
+.btn-middle {
+    width: 13rem;
+    height: 4.6rem;
+    color: white;
+}
+
+.btn-large {
+    width: 19rem;
+    height: 4.6rem;
+}
+
+button:disabled {
+    opacity: 0.8;
+}
+
+.btn-small {
+    color: white;
+    width: 14rem;
+    height: 4.5rem;
+    margin-left: auto;
+}
+
+
+
+/*SearchForm ve SearchFormItem Compenenti Css Bölümü */
+
+.search-elements {
+    width: 40%;
+    margin: 5rem auto;
+}
+
+.search-elements h3 {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.search-elements form {
+    margin: 2rem 0;
+    width: 50rem;
+    height: 4.5rem;
+    background-color: white;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.search-elements .faSearch {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+
+.search-elements input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+
+.search-elements .link {
+    position: absolute;
+    margin-left: 50rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.search-elements .link:visited {
+    color: white;
+}
+
+
+.result-element {
+    width: 70%;
+    background: #FFFFFF;
+    border: 1px solid #484848;
+    border-radius: 24px;
+}
+
+.result-element:empty {
+    border: none;
+}
+
+.show-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-decoration: none;
+}
+
+.show-more:visited {
+    color: #090A0A;
+}
+
+.search-element {
+    display: flex;
+    height: 6rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.search-element .result-icon {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.search-element .result-paragraph {
+    width: 80%;
+    margin-left: 1rem;
+}
+
+.result-paragraph p:first-child {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-paragraph p:last-child {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #72777A;
+}
+
+.search-element .border {
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #c3c3c3;
+}
+
+
+
+
+
+
+/*Slider Compenentinde uygulanan Css bölümü */
+
+.slider {
+    min-height: 27rem;
+    margin: 5rem;
+}
+
+.slider-elements {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider .element {
+    width: 25%;
+    margin: 0 3rem;
+}
+
+.slider h3 {
+    font-size: 3.2rem;
+    margin-bottom: 5rem;
+    padding-left: 6rem;
+}
+
+.slider .left-button,
+.slider .right-button {
+    height: 5rem;
+    width: 5rem;
+    margin: auto 0;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+}
+
+
+.slider .left-button:active,
+.slider .right-button:active {
+    transform: translateY(4px);
+}
+
+
+.slider .slider-paragraph {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+
+
+.slider .slider-image {
+    width: 100%;
+}
+
+.slider .slider-footer {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #6C7072;
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+/* Footer component'i css bölümü */
+footer {
+    background: rgba(41, 78, 152, 0.72);
+    width: 100%;
+    min-height: 27rem;
+
+    display: flex;
+    align-items: center;
+}
+
+
+footer img {
+    margin: 0 5rem;
+}
+
+footer p {
+    font-size: 1.8rem;
+    color: white;
+    line-height: 21.09px;
+    margin-right: 5rem;
+}
+
+.footer-paragraph {
+    margin-top: 3rem;
+}
+
+footer p:first-child,
+footer p:last-child {
+    font-weight: bold;
 }
