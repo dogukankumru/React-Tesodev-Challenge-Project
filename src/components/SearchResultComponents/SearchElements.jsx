@@ -5,12 +5,12 @@ import SearchResultHeader from "./SearchResultHeader"
 
 function SearchElements() {
 
-  const {text,setText,setSelectedValue,fetchData} =useContext(Context)
+  const {text,setText,setSelectedValue,fetchData,selectedValue,dummy} =useContext(Context)
 
   //Sayfa yenilendiği takdirde Json dosyasından bilgileri tekrardan alması gerekiyor.
   useEffect(()=>{
     fetchData();
-  })
+  },[])
 
   //Bu sayfada anasayfadaki gibi dinamik arama olmadığı için, sadece butona tıklandığı zaman sonuçlar ekranda gösterilecek.
   const handleSubmit =(e)=>{
@@ -23,6 +23,7 @@ function SearchElements() {
     setSelectedValue(e.target.value);
   }
 
+  
   return (
     <>
       <SearchResultHeader/>
