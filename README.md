@@ -1,5 +1,5 @@
 # Tesodev Data Management System
-The Tesodev Data Management System is a feature-rich React application designed for managing and searching user data. It consists of three main pages: Home, Search Results and Add Record. Each offering distinct functionalities and features. Such as pagination, sliding cards and validators.
+The Tesodev Data Management System is a feature-rich React application without any external Css library designed for managing and searching user data. It consists of three main pages: Home, Search Results and Add Record. Each offering distinct functionalities and features. Such as pagination, sliding cards and validators.
 
 ## Features
 * Home Page
