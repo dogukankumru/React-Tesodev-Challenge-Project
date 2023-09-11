@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Tesodev Data Management System
+The Tesodev Data Management System is a feature-rich React application designed for managing and searching user data. It consists of three main pages: Home, Search Results and Add Record. Each offering distinct functionalities and features. Such as pagination, sliding cards and validators.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+* Home Page
+  * Add New Record Button: Clicking this button navigates you to the "Add New Record" page, where you can add new user data.
+  * Search Input: A search input at the center of the page allows you to filter results by name.
+    Show More Button: When more than three results match your search, a "Show More" button appears, allowing you to navigate to the "Search Results" page.
+  * Footer Card Slider: You can slide through user data cards with arrow buttons in the footer.
+  * Contact Details: Contact information for Tesodev is provided, including address and phone number.
+  * Google Map: An embedded Google Map displays Tesodev's location.
+  
+* Search Results Page
+  * Pagination: User data is displayed with pagination, showing five results per page.
+  * Dropdown Sort: You can sort results by Name Ascending, Name Descending, Year Ascending, and Year Descending using the dropdown menu.
+ 
+* Add New Record Page
+  * Form: A form allows you to add new user data, including name, surname, country, city, and email.
+  * Validation: The form includes validation for the following conditions:
+    * Name and surname input cannot be empty.
+    * Name and surname must contain at least two words.
+    * Name and surname cannot contain numbers.
+    * Name and surname must be at least four characters long.
+    * Country and city inputs cannot have fewer than two letters.
+    * Email input is validated for correct email format.
+  * Error Pop-Up: When validation errors occur, an error pop-up will display, listing the errors. The pop-up includes an option to close it.
+    * Error List: The pop-up displays a list of errors related to the form fields.
+    * Close Button: Users can close the error pop-up by clicking the "X" button.
+  * Add Button: The "Add" button adds a new user data object (for display purposes only).
 
-## Available Scripts
+## Getting Started
+To use this project, follow these steps:
+1. Clone the repository to your local machine: git clone https://github.com/dogukankumru/React-Tesodev-Challenge-Project.git
+2. Navigate to the project directory:
+3. Install project dependencies: (npm install)
+4. Start the development server: (npm start)
+5. Open a web browser and access the application at http://localhost:3000.
 
-In the project directory, you can run:
+## Usage
+  * Home Page
+    1. Click the "Add New Record" button to navigate to the "Add New Record" page.
+    2. Enter a name in the search input field. If more than three results match, a "Show More" button will appear.
+    3. Use the card slider to view user data cards.
+    4. Scroll to see contact details and the embedded Google Map.
+       
+  * Search Results Page
+    1. Use the dropdown to sort results.
+    2. Click page numbers for pagination.
+    3. Enter a name in the search input field.
+    4. Click the "Search" button to see updated results.
 
-### `npm start`
+  * Add New Record Page
+    1. Fill out the form with user data.
+    2. Ensure data meets validation criteria.
+    3. Click the "Add" button to add a new user data object (display purposes only).
+   
+## Screenshots
+### Home Page
+<img width="1440" alt="Screenshot 2023-09-11 at 10 29 23" src="https://github.com/dogukankumru/React-Tesodev-Challenge-Project/assets/95023894/1f5874a9-bac5-41fd-a66e-a0f0b3905fc5">
+<img width="1440" alt="Screenshot 2023-09-11 at 10 29 57" src="https://github.com/dogukankumru/React-Tesodev-Challenge-Project/assets/95023894/63822e45-7bf5-459b-9b85-355599dc7f3e">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Search Results Page
+<img width="1440" alt="Screenshot 2023-09-11 at 10 31 02" src="https://github.com/dogukankumru/React-Tesodev-Challenge-Project/assets/95023894/93d869cb-6cfd-40ed-915a-f6c699ba22e8">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Add New Record Page
+<img width="1440" alt="Screenshot 2023-09-11 at 10 31 46" src="https://github.com/dogukankumru/React-Tesodev-Challenge-Project/assets/95023894/a094edfc-e2be-4f8e-a027-f432401481b9">
+<img width="1440" alt="Screenshot 2023-09-11 at 10 33 50" src="https://github.com/dogukankumru/React-Tesodev-Challenge-Project/assets/95023894/fbc32d9c-8de1-4c4c-bab8-e803d0b9d951">
